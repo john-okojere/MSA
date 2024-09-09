@@ -1,0 +1,489 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    height: 100vh;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 300px;
+    background: #007bff;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    color: #ffffff; /* Ensure text color is white */
+}
+
+.sidebar .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar .slogo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar .slogo img {
+    width: 20px;
+}
+
+.main .modes {
+    display: flex;
+    align-items: center;
+}
+
+.main .modes a {
+    margin-left: 10px;
+}
+
+.sidebar .mid {
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+.sidebar .hist span {
+    display: block;
+    padding: 10px;
+    height: 62px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #fff; /* Ensure text color is white */
+}
+
+.sidebar .hist span:hover {
+    background: #14141423;
+}
+
+.sidebar .hist .active {
+    background: #14141423;
+}
+.sidebar .hist {
+    height: 70vh;
+    overflow: auto;
+}
+.down {
+    margin-top: 20px;
+}
+
+.bn{
+    background: #fff !important;
+    color: #007bff !important;
+}
+.bn-ol{
+    border: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.bn:hover, .bn-ol:hover{
+    background: #004085 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.main {
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+    color: white;
+}
+
+.main .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d9e9fa;
+    padding: 15px;
+    color: #007bff;
+    position: relative
+
+}
+
+.main .hamburger {
+    display: none;
+    color: #007bff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.main .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: fff;
+    align-self: center;
+}
+
+.main .top-btn a {
+    color: #fff;
+    background: #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.main .container-sm {
+    background-color: #ffffff; /* Ensure main content background */
+}
+
+.main .mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+    color: #3b3b3b; /* Text color in main content */
+}
+
+.main .logo img {
+    width: 80px;
+}
+
+.main .greeting {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main .prompts .pmt1,
+.main .prompts .pmt2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    background-color: #007bff18;
+    color: #474747;
+    cursor: pointer;
+}
+
+.chat-section {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #ffffff;
+    height: 70vh;
+    
+}
+
+.chat-section .message {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    height: fit-content;
+    width: fit-content;
+    max-width: 550px;
+    padding: 10px;
+    border-radius: 0px 10px 10px 10px;
+    background-color: #007bff18;
+    color: #000000;
+}
+.chat-section .sender {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    height: fit-content;
+    width: fit-content;
+    max-width: 550px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 10px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.down {
+    padding: 15px;
+}
+
+.input-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Ensure input bar background */
+}
+
+.input-bar .input {
+    flex-grow: 1;
+    border: 1px solid #ccc; /* Bright grey outline */
+    border-radius: 5px; /* Rounded corners */
+    height: 55px;
+    padding: 16px;
+    background-color: #333; /* Textarea background color */
+    color: #fff; /* Text color in textarea */
+    resize: none;
+    outline: none;
+}
+
+.input-bar .input::placeholder {
+    color: #555555; /* Bright grey placeholder text */
+}
+
+.input-bar a {
+    background: #007bff;
+    padding: 10px;
+    border-radius: 50%; /* Round send button */
+    color: #fff;
+    text-decoration: none;
+}
+
+.note {
+    margin-top: 10px;
+    font-size: 8px;
+    color: #555; /* Note text color */
+    text-align: center;
+}
+
+.input-bar{
+    height: 60px;
+    border: 3px solid #007bff;
+    display: flex;
+    padding: 2px;
+    border-radius: 30px;
+    max-width: 800px;
+}
+
+.send-button{
+    height: 50px;
+    width: 55px;
+    border-radius: 30px;
+    align-content: center;
+}
+
+textarea{
+    flex-grow: 1;
+    padding: 10px;
+    height: 50px !important;
+    border-radius: 25px !important;
+    border: hidden !important;
+    background-color: #44444400 !important;
+    color: white !important;
+    outline: none !important;
+    resize: none;
+    overflow-y: hidden;
+}
+
+textarea::placeholder{
+    color: #000;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+}
+
+/*Login*/
+.entryarea{
+    max-width: 500px;
+    color: #9c9c9c;
+}
+
+#acct{
+    background: #ffffff !important;
+}
+input{
+    background: transparent !important;
+    color: #9c9c9c !important;
+}
+.gn{
+    display: none !important;
+}
+.acct-img{
+    width: 100px;
+    height: 100px;
+    background: #007bff;
+    border: 3px solid #007bff;
+    border-radius: 50%;
+}
+
+.acct-img img{
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    background: #00000000;
+}
+
+.center{
+    padding-top: 30px;
+    color: #000000 !important;
+    font-size: 1.rem;
+}
+.box{
+    width: fit-content;
+    height: auto;
+    background: #e7e7e7;
+    padding: 10px 30px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+    color: #000000;
+    cursor: pointer;
+}
+.form-btn{
+    height: 60px;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+}
+
+/* Continue */
+.bi-check2-circle{
+    font-size: 6rem;
+    -webkit-text-stroke: 4px;
+}
+.success a[href="index.html"], .success a[href="signup.html"] {
+    padding: 10px 60px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.cnt{
+    width: 60%;
+}
+
+.four {
+    margin-top: 0 !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 5px;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        width: 250px;
+        height: 100%;
+        left: -250px;
+        top: 0;
+        padding: 15px;
+        transition: left 0.3s ease;
+    }
+    .sidebar .hist {
+        height: 50vh;
+        overflow: auto;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    div.down.four.d-grid{
+        font-size: 12px;
+        align-self: auto;
+    }
+
+    .main {
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+    }
+
+    .main .top {
+        position: relative;
+    }
+
+    .main .hamburger {
+        display: block;
+        margin-left: 15px;
+    }
+
+    .main .name {
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .main .modes {
+        display: flex;
+        align-items: center;
+    }
+
+    .main .modes a {
+        margin-left: 10px;
+    }
+
+    .input-bar{
+        width: 100%;
+        height: 50px;
+        border: 3px solid #007bff;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        top: 50%;
+        left: 50%;
+        border-radius: 30px;
+    
+    }
+    
+    .send-button{
+        height: 40px;
+        width: 50px;
+        border-radius: 30px;
+    }
+    
+    textarea{
+        flex-grow: 1;
+        padding: 10px;
+        height: 50px !important;
+        border-radius: 25px !important;
+        border: hidden !important;
+        background-color: #44444400 !important;
+        color: white !important;
+        outline: none !important;
+        resize: none;
+        overflow-y: hidden;
+    }
+    
+    .main .prompts .pmt1,
+    .main .prompts .pmt2 {
+        font-size: 14px;
+        margin-bottom: 12px;
+        padding: 8px 16px 8px 16px;
+        border-radius: 3px;
+    }
+    .main .logo img {
+        width: 40px;
+    }
+    
+    .main .greeting {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    textarea::placeholder{
+        color: #000;
+        text-align: left;
+        vertical-align: top;
+        position: fixed;
+        left: 20px;
+        top: 13px;
+        font-size: 12px;
+    }
+    .chat-section .message {
+        max-width: 300px;  
+    }
+    .chat-section .sender {
+        max-width: 300px;  
+    }
+
+    .sidebar .hist span{
+        font-size: 12px;
+    }
+}
+
+/* Light Mode Styles */
+/* Define styles for light mode in dark.css */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySAVA - Login</title>
+    <link id="themeStylesheet" href="style.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon">
+</head>
+<body id="acct">
+<div class="container">
+<center class="center">
+    <div class="acct-img">
+        <img src="img/logo-w.svg" style="padding-top: 23%;" class="lgn" width="50px" alt="MySAVA">
+    </div>
+    <p style="font-size: 1.5rem;">Log in to your Account</p>
+    <form action="success.html" method="get" class="entryarea">
+        {% csrf_token %}
+        {{ form | c }}
+        <br>
+        <button class="form-control form-btn btn btn-primary">Log In</button>
+    </form>
+    <br>
+    <div>- Or sign in with -</div>
+    <br>
+    <div class="otp">
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="box"><img width="25px" src="{% static 'img/google.png' %}" alt="google"></a>
+        <a href="{% url 'social:begin' 'azuread-oauth2' %}" class="box"><img width="25px" src="{% static 'img/microsoft.png' %}" alt="microsoft"></a>
+    </div>
+
+    <br>
+    <div>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></div>
+</center>
+
+</div>
+
+<script src="{% static 'javascript.js' %}"></script>
+</body>
+</html>
